@@ -1,0 +1,59 @@
+{
+  "name": "msw-contract-audit",
+  "version": "1.0.0",
+  "description": "CLI and library to audit MSW v2 HTTP handlers against an OpenAPI 3.x specification. Detects missing mocks and outdated route coverage before tests run.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "msw-contract-audit": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "audit:example": "node src/cli.js --spec examples/openapi.yaml --handlers examples/handlers.js",
+    "audit:example:json": "node src/cli.js --spec examples/openapi.yaml --handlers examples/handlers.js --format json",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "keywords": [
+    "msw",
+    "mock-service-worker",
+    "openapi",
+    "api",
+    "contract",
+    "audit",
+    "testing",
+    "cli",
+    "coverage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deathseeker3717/msw-contract-audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deathseeker3717/msw-contract-audit/issues"
+  },
+  "homepage": "https://github.com/deathseeker3717/msw-contract-audit#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "commander": "^12.1.0",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}

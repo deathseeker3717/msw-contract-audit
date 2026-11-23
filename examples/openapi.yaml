@@ -1,0 +1,38 @@
+openapi: "3.0.3"
+info:
+  title: Example API
+  version: "1.0.0"
+paths:
+  /users:
+    get:
+      operationId: listUsers
+      summary: List all users
+      responses:
+        "200":
+          description: OK
+    post:
+      operationId: createUser
+      summary: Create a user
+      responses:
+        "201":
+          description: Created
+  /users/{id}:
+    get:
+      operationId: getUser
+      summary: Get a user by ID
+      responses:
+        "200":
+          description: OK
+    delete:
+      operationId: deleteUser
+      summary: Delete a user by ID
+      responses:
+        "204":
+          description: No Content
+  /products:
+    get:
+      operationId: listProducts
+      summary: List all products
+      responses:
+        "200":
+          description: OK
