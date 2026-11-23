@@ -8,7 +8,7 @@
     ".": "./src/index.js"
   },
   "bin": {
-    "msw-contract-audit": "./src/cli.js"
+    "msw-contract-audit": "src/cli.js"
   },
   "files": [
     "src",
